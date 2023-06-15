@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZAS_13_GAMES_GW_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="Student" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Studentid"/>
+                </Key>
+                <Property Name="Studentid" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="StudentID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Forename" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Forname" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Surname" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Surname" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="Games" Relationship="ZAS_13_GAMES_GW_SRV.Student_favgame" FromRole="FromRole_Student_favgame" ToRole="ToRole_Student_favgame"/>
+            </EntityType>
+            <EntityType Name="Game" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Studentid"/>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Studentid" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="StudentID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Id" Type="Edm.Binary" Nullable="false" MaxLength="16" sap:unicode="false" sap:label="GUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="Student" Relationship="ZAS_13_GAMES_GW_SRV.Student_favgame" FromRole="ToRole_Student_favgame" ToRole="FromRole_Student_favgame"/>
+            </EntityType>
+            <Association Name="Student_favgame" sap:content-version="1">
+                <End Type="ZAS_13_GAMES_GW_SRV.Student" Multiplicity="1" Role="FromRole_Student_favgame"/>
+                <End Type="ZAS_13_GAMES_GW_SRV.Game" Multiplicity="*" Role="ToRole_Student_favgame"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Student_favgame">
+                        <PropertyRef Name="Studentid"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Student_favgame">
+                        <PropertyRef Name="Studentid"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZAS_13_GAMES_GW_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="StudentSet" EntityType="ZAS_13_GAMES_GW_SRV.Student" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="GameSet" EntityType="ZAS_13_GAMES_GW_SRV.Game" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="Student_favgameSet" Association="ZAS_13_GAMES_GW_SRV.Student_favgame" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="StudentSet" Role="FromRole_Student_favgame"/>
+                    <End EntitySet="GameSet" Role="ToRole_Student_favgame"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="https://A03Z.UCC.OVGU.DE:443/sap/opu/odata/sap/ZAS_13_GAMES_GW_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://A03Z.UCC.OVGU.DE:443/sap/opu/odata/sap/ZAS_13_GAMES_GW_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
