@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.10.0",
-      "toolsId": "06a586e2-bac4-48a6-b440-b157152caa23"
+      "toolsId": "f89bf4db-8d45-4866-812e-b57d4fa114e5"
     },
     "dataSources": {
       "mainService": {
@@ -55,13 +55,7 @@
         "sap.ui.comp": {},
         "sap.ui.generic.app": {},
         "sap.ui.table": {},
-        "sap.ushell": {},
-        "rootView": {
-          "viewName": "sap.ui.demo.fiori2.view.App",
-          "type": "XML",
-          "async": false,
-          "id": "fcl"
-        },
+        "sap.ushell": {}
       }
     },
     "contentDensities": {
@@ -100,20 +94,20 @@
       },
       "routes": [
         {
-          "name": "RouteStudentsGames",
+          "name": "Routestudentsgames",
           "pattern": ":?query:",
           "target": [
-            "TargetStudentsGames"
+            "Targetstudentsgames"
           ]
         }
       ],
       "targets": {
-        "TargetStudentsGames": {
+        "Targetstudentsgames": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "StudentsGames",
-          "viewName": "StudentsGames"
+          "viewId": "studentsgames",
+          "viewName": "studentsgames"
         }
       }
     },

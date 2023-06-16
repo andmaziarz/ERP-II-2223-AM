@@ -1,14 +1,13 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    'sap/ui/model/json/JSONModel'
+    "sap/ui/core/mvc/Controller"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, JSONModel) {
+    function (Controller) {
         "use strict";
 
-        return Controller.extend("studentsgames.controller.StudentsGames", {
+        return Controller.extend("studentsgames.controller.studentsgames", {
             onInit: function () {
 
             }
