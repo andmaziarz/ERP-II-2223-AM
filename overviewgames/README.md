@@ -1,26 +1,25 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Thu May 11 2023 14:31:29 GMT+0000 (Coordinated Universal Time)|
-|**App Generator**<br>@sap/generator-fiori-elements|
-|**App Generator Version**<br>1.9.5|
+|**Generation Date and Time**<br>Fri Jun 16 2023 12:46:45 GMT+0000 (Coordinated Universal Time)|
+|**App Generator**<br>@sap/generator-fiori-freestyle|
+|**App Generator Version**<br>1.10.0|
 |**Generation Platform**<br>SAP Business Application Studio|
-|**Template Used**<br>List Report Page V2|
+|**Template Used**<br>simple|
 |**Service Type**<br>SAP System (ABAP On Premise)|
-|**Service URL**<br>http://a03z.ucc.ovgu.de:443/sap/opu/odata/sap/ZCAS_13_GAMES_SERV_CDS
-|**Module Name**<br>overviewgames|
-|**Application Title**<br>Overview Games|
+|**Service URL**<br>http://a03z.ucc.ovgu.de:443/sap/opu/odata/sap/ZAS_13_GAMES_GW_SRV
+|**Module Name**<br>studentsgames|
+|**Application Title**<br>Students Games|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_horizon|
-|**UI5 Version**<br>1.113.0|
+|**UI5 Version**<br>1.115.0|
 |**Enable Code Assist Libraries**<br>False|
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
-|**Main Entity**<br>ZCAS_13_GAMES_SERV|
 
-## overviewgames
+## studentsgames
 
-A Fiori application for Overview Games
+A Fiori application for Students Games
 
 ### Starting the generated app
 
