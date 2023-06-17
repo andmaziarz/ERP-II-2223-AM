@@ -1,7 +1,30 @@
 <mvc:View controllerName="studentsgames.controller.studentsgames"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+    <Page id="page" title="Students">
+    <content>
+            <Table id="StudentsTable" inset="false" items="{/StudentSet}">
+                <columns>
+                                <Column id="clmStudentid" width="12em">
+                                    <Text id="lblStudentid" text="Student ID" />
+                                </Column>
+                                <Column id="clmForname" demandPopin="true">
+                                    <Text id="lblForname" text="First name" />
+                                </Column>
+                                <Column id="clmSurname" demandPopin="true">
+                                    <Text id="lblSurname" text="Last name" />
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem id="_IDGenColumnListItem1" vAlign="Middle">
+                                    <cells>
+                                        <Text id="txtStudentid" text="{Studentid}" />
+                                        <Text id="txtForname" text="{Forename}" />
+                                        <Text id="txtSurname" text="{Surname}" />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+            </Table>
+        </content>
     </Page>
 </mvc:View>
