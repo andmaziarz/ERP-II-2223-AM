@@ -1,9 +1,9 @@
 <mvc:View controllerName="studentsgames.controller.studentsgames"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="Students">
+    <Page id="page">
     <content>
-            <Table id="StudentsTable" inset="false" items="{/StudentSet}">
+            <Table id="StudentsTable" inset="false" items="{/StudentSet}" headerText="Students">
                 <columns>
                                 <Column id="clmStudentid" width="12em">
                                     <Text id="lblStudentid" text="Student ID" />
@@ -21,6 +21,29 @@
                                         <Text id="txtStudentid" text="{Studentid}" />
                                         <Text id="txtForname" text="{Forename}" />
                                         <Text id="txtSurname" text="{Surname}" />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+            </Table>
+
+            <Table id="GamesTable" inset="false" items="{/GameSet}" headerText="Games">
+                <columns>
+                                <Column id="clmName" width="12em">
+                                    <Text id="lblName" text="Name" />
+                                </Column>
+                                <Column id="clmGenre" demandPopin="true">
+                                    <Text id="lblGenre" text="Genre" />
+                                </Column>
+                                <Column id="clmPlatform" demandPopin="true">
+                                    <Text id="lblPlatform" text="Platform" />
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem id="_IDGenColumnListItem2" vAlign="Middle">
+                                    <cells>
+                                        <Text id="txtName" text="{Name}" />
+                                        <Text id="txtGenre" text="{Genre}" />
+                                        <Text id="txtPlatform" text="{Platform}" />
                                     </cells>
                                 </ColumnListItem>
                             </items>

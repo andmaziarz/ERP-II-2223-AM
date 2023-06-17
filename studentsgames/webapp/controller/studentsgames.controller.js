@@ -11,7 +11,6 @@ sap.ui.define([
 
         return Controller.extend("studentsgames.controller.studentsgames", {
             onInit: function () {
-                var oModel = new sap.ui.model.odata.ODataModel("https://a03z.2.ucc.md:443/sap/opu/odata/sap/ZAS_13_GAMES_GW_SRV/");
             }
         });
     });
