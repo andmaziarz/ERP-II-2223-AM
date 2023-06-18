@@ -5,7 +5,7 @@
     <content>
             <Table id="StudentsTable" inset="false" items="{/StudentSet}" headerText="Students">
                 <columns>
-                                <Column id="clmStudentid" width="12em">
+                                <Column id="clmStudentid">
                                     <Text id="lblStudentid" text="Student ID" />
                                 </Column>
                                 <Column id="clmForname" demandPopin="true">
@@ -28,7 +28,10 @@
 
             <Table id="GamesTable" inset="false" items="{/GameSet}" headerText="Games">
                 <columns>
-                                <Column id="clmName" width="12em">
+                                <Column id="clmId">
+                                    <Text id="lblId" text="Game ID" />
+                                </Column>
+                                <Column id="clmName">
                                     <Text id="lblName" text="Name" />
                                 </Column>
                                 <Column id="clmGenre" demandPopin="true">
@@ -41,6 +44,7 @@
                             <items>
                                 <ColumnListItem id="_IDGenColumnListItem2" vAlign="Middle">
                                     <cells>
+                                        <Text id="txtId" text="{Id}" />
                                         <Text id="txtName" text="{Name}" />
                                         <Text id="txtGenre" text="{Genre}" />
                                         <Text id="txtPlatform" text="{Platform}" />
